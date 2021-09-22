@@ -36,16 +36,16 @@
          <div class="right-col col">
             <div class="social-icons">
                <?php if($facebook):?>
-               <a href="<?php echo esc_url($facebook);?>"><i class="fab fa-facebook-square"></i></a>
+               <a href="<?php echo esc_url($facebook);?>" target="_blank"><i class="fab fa-facebook-square"></i></a>
                   <?php endif; ?>
                <?php if($twiter):?>
-               <a href="<?php echo esc_url($twiter);?>"><i class="fab fa-twitter"></i></a>
+               <a href="<?php echo esc_url($twiter);?>" target="_blank"><i class="fab fa-twitter"></i></a>
                <?php endif;?>
                <?php if($instagram):?>
-               <a href="<?php echo esc_url($instagram);?>"><i class="fab fa-instagram-square"></i></a>
+               <a href="<?php echo esc_url($instagram);?>" target="_blank"><i class="fab fa-instagram-square"></i></a>
                <?php endif;?>
                <?php if($vimeo):?>
-               <a href="<?php echo esc_url($vimeo);?>"><i class="fab fa-vimeo-v"></i></a>
+               <a href="<?php echo esc_url($vimeo);?>" target="_blank"><i class="fab fa-vimeo-v"></i></a>
                <?php endif;?>
             </div>
          </div>
