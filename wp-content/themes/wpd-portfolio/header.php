@@ -16,16 +16,37 @@
    <div class="header-top">
       <div class="container clearfix">
          <div class="left-col col">
-            <a class="email" href="mailto:support@waxomtamplate.com"><i class="fas fa-envelope"></i> support@waxomtamplate.com</a>
-            <span class="contact-num"><i class="fas fa-phone-volume"></i> +440 875369208</span>
+         <?php 
+         $email=get_theme_mod('wpd_email');
+         $mobile=get_theme_mod('wpd_mobile');
+         $facebook=get_theme_mod('facebook');
+         $twiter=get_theme_mod('twiter');
+         $instagram=get_theme_mod('instagram');
+         $vimeo=get_theme_mod('vimeo');
+         ?>
+         <?php if($email): ?>
+            <a class="email" href="mailto:<?php echo esc_attr($email);?>"><i class="fas fa-envelope"></i> <?php echo esc_html($email); ?></a>
+
+            <?php endif; ?>
+            <?php if($mobile): ?>
+            <span class="contact-num"><i class="fas fa-phone-volume"></i><?php echo esc_html($mobile);?></span>
+            <?php endif; ?>
          </div>
 
          <div class="right-col col">
             <div class="social-icons">
-               <a href="#"><i class="fab fa-facebook-square"></i></a>
-               <a href="#"><i class="fab fa-twitter"></i></a>
-               <a href="#"><i class="fab fa-instagram-square"></i></a>
-               <a href="#"><i class="fab fa-vimeo-v"></i></a>
+               <?php if($facebook):?>
+               <a href="<?php echo esc_url($facebook);?>"><i class="fab fa-facebook-square"></i></a>
+                  <?php endif; ?>
+               <?php if($twiter):?>
+               <a href="<?php echo esc_url($twiter);?>"><i class="fab fa-twitter"></i></a>
+               <?php endif;?>
+               <?php if($instagram):?>
+               <a href="<?php echo esc_url($instagram);?>"><i class="fab fa-instagram-square"></i></a>
+               <?php endif;?>
+               <?php if($vimeo):?>
+               <a href="<?php echo esc_url($vimeo);?>"><i class="fab fa-vimeo-v"></i></a>
+               <?php endif;?>
             </div>
          </div>
       </div>

@@ -41,3 +41,7 @@ function wpd_wp_enqueue_scripts(){
 }
 
 add_action('wp_enqueue_scripts','wpd_wp_enqueue_scripts');
+
+// includes all php file
+
+require get_template_directory().'/inc/customizer.php';
