@@ -66,5 +66,21 @@ function wpd_customize_register($wp_customize){
         'title' => __( 'Header Top',TEXTDOMAIN),
         
       ) );
+      // background color settings
+   $wp_customize->add_setting( 'header_top_bg', array(
+    'default'=> '#fbfaf8',
+    'sanitize_callback' => 'sanitize_hex_color',
+     ) );
+
+      // background color control
+      $wp_customize->add_control( 
+        new WP_Customize_Color_Control( 
+        $wp_customize, 
+        'header_top_bg', 
+        array(
+            'label'      => __( 'Background Color',TEXTDOMAIN),
+            'section'    => 'Header_Top',
+        ) ) 
+    );
 }
 add_action('customize_register','wpd_customize_register');
